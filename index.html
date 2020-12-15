@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>praticing template css sing in sing up</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="PLM" />
+
+    <style>
+        @charset "UTF-8";
+a, a:hover, a:active, a:visited{
+    text-decoration: none;
+    color: #0a142e;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 320px){
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    header{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0a142e;
+
+    }
+    main{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e7e7e7;
+    }
+    .items-link{
+        width: 90%;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}
+@media (min-width: 720px){
+    .container{
+        flex-direction: row;
+    }
+    header, main{
+        width: 50%;
+    }
+}
+
+.padrao-link{
+    width: 250px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+#cadastro-link{
+    height: 450px;
+}
+
+.botao-link{
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    background: #e7e7e7;
+}
+#register-link{
+    background: #0a142e;
+    color: #e7e7e7;
+}
+
+span{
+    line-height: 5;
+    font-size: 16px;
+    color: #e7e7e7;
+}
+#cadastro-link span{
+    line-height: 5;
+    font-size: 16px;
+    color: #0a142e;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="items-link">
+                <span>enter username and password</span>
+                <input onfocus="this.value=''" class="padrao-link" value="login">
+                <input onfocus="this.value=''" class="padrao-link" value="password" type="password">
+                <button class="botao-link">Enter</button>
+                <button class="botao-link"><a href="#cadastro-link">Sing up</a></button>
+            </div>
+        </header>
+        <main>
+            <div class="items-link" id="cadastro-link">
+                <span>Sing up quickly</span>
+                <input onfocus="this.value=''" class="padrao-link" value="name" type="text">
+                <input onfocus="this.value=''" class="padrao-link" value="email">
+                <input onfocus="this.value=''" class="padrao-link" value="nick name">
+                <input onfocus="this.value=''" class="padrao-link" value="password">
+                <button onfocus="this.value=''" class="botao-link" id="register-link">Continue</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
